@@ -1,3 +1,4 @@
+require('dotenv').config();
 const ws = require('ws');
 const express = require('express');
 const config = require('config');
