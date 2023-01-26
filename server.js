@@ -14,6 +14,10 @@ const staticPath = path.join(__dirname, "src")
 const app = express()
 app.use(express.static(staticPath))
 
+app.get("/", (req, res) => {
+    res.sendStatus(200)
+})
+
 console.log('ws port: ', WS_PORT);
 
 app.listen(PORT, () => console.log(`Server start on port ${PORT}`))

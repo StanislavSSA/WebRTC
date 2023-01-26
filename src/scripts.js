@@ -2,8 +2,9 @@
 // WS
 
 const origin = window.location.href.split("//")[1].split(":")[0]
-// const url = `ws://${origin}:8000`
-const url = `wss://${origin}`
+const url = window.location.href.includes("https")
+    ? `wss://${origin}`
+    : `ws://${origin}:8000`
 const ws = new WebSocket(url)
 
 const mediaConfig = {
