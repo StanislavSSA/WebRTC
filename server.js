@@ -12,10 +12,10 @@ const staticPath = path.join(__dirname, "src")
 // Express
 
 const app = express()
-app.use(express.static(staticPath))
+// app.use(express.static(staticPath))
 
 app.get("/", (req, res) => {
-    res.sendStatus(200)
+    res.status(200).end()
 })
 
 console.log('ws port: ', WS_PORT);
