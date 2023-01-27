@@ -3,7 +3,7 @@
 
 const origin = window.location.href.split("//")[1].split(":")[0]
 const url = window.location.href.includes("https")
-    ? `wss://${origin}`
+    ? `wss://${origin}:8000`
     : `ws://${origin}:8000`
 const ws = new WebSocket(url)
 
